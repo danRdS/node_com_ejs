@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header', {pagina: 'Lista'}); %>
+    
+    <main class="container">
+        <h1>Lista</h1>
+        <p>Lista renderizada dinamicamente com valores vindos do servidor</p>
+        <ul class="lista">
+            <% optionsList.forEach(option => { %>
+                <li>
+                    <a href="<%= option.link %>"><%= option.name %></a>
+                </li>
+            <% }) %>
+            <div class="bolha"></div>
+        </ul>
+    </main>
+
+    <%- include('../partials/footer') %>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
